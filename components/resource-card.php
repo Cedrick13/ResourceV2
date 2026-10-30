@@ -1,5 +1,6 @@
 
 <article class="resource-card"
+    data-id="<?= (int)$resource['id'] ?>"
     data-category="<?= htmlspecialchars($resource['category']) ?>"
     data-title="<?= htmlspecialchars($resource['title']) ?>"
     data-date="<?= htmlspecialchars($resource['date']) ?>"
@@ -24,6 +25,7 @@
     </div>
 
     <div class="card-footer">
+
         <a href="<?= htmlspecialchars($resource['url']) ?>"
            target="_blank"
            rel="noopener noreferrer">
@@ -31,11 +33,18 @@
         </a>
 
         <button class="favorite-btn"
-                aria-label="Toggle favorite"
+                type="button"
+                aria-label="Add to favorites"
                 aria-pressed="false">
+
             <i class="fa-regular fa-heart"></i>
-            <span><?= (int)($resource['favorites'] ?? 0) ?></span>
+
+            <span class="favorite-count">
+                <?= (int)($resource['favorites'] ?? 0) ?>
+            </span>
+
         </button>
+
     </div>
 
 </article>

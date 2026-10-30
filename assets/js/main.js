@@ -1,68 +1,112 @@
 
-const favoriteStorageKey = 'resourceV2Favorites';
+const FAVORITES_KEY = 'resourceV2Favorites';
 
-let savedFavorites = JSON.parse(
-    localStorage.getItem(favoriteStorageKey) || '[]'
-);
+// Get saved favorite IDs from this browser
+function getFavorites() {
+    try {
+        return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
+    } catch {
+        return [];
+    }
+}
 
+function saveFavorites(ids) {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(ids));
+}
+
+let savedFavorites = getFavorites();
+
+// Initialize favorite buttons
 document.querySelectorAll('.resource-card').forEach(card => {
+
+    const id = Number(card.dataset.id);
     const button = card.querySelector('.favorite-btn');
-    const title = card.dataset.title;
+
     const icon = button.querySelector('i');
-    const count = button.querySelector('span');
+    const count = button.querySelector('.favorite-count');
 
-    function updateFavoriteUI() {
-        const active = savedFavorites.includes(title);
+    function updateUI(isFavorite) {
+        button.classList.toggle('is-favorite', isFavorite);
+        button.setAttribute('aria-pressed', String(isFavorite));
 
-        button.classList.toggle('is-favorite', active);
-        button.setAttribute('aria-pressed', String(active));
-
-        icon.className = active
+        icon.className = isFavorite
             ? 'fa-solid fa-heart'
             : 'fa-regular fa-heart';
-
-        count.textContent =
-            Number(card.dataset.favorites || 0) + (active ? 1 : 0);
     }
 
-    updateFavoriteUI();
+    updateUI(savedFavorites.includes(id));
 
-    button.addEventListener('click', () => {
-        if (savedFavorites.includes(title)) {
-            savedFavorites = savedFavorites.filter(item => item !== title);
-        } else {
-            savedFavorites.push(title);
+    button.addEventListener('click', async () => {
+
+        if (button.disabled) return;
+
+        const wasFavorite = savedFavorites.includes(id);
+        const action = wasFavorite ? 'remove' : 'add';
+
+        button.disabled = true;
+
+        try {
+
+            const response = await fetch('api/toggle-favorite.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id,
+                    action: action
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || 'Unable to update favorite');
+            }
+
+            if (action === 'add') {
+                savedFavorites.push(id);
+            } else {
+                savedFavorites = savedFavorites.filter(item => item !== id);
+            }
+
+            saveFavorites(savedFavorites);
+
+            // Update card count from JSON response
+            count.textContent = result.favorites;
+            card.dataset.favorites = result.favorites;
+
+            updateUI(action === 'add');
+
+            // Update total dashboard statistics if present
+            updateFavoriteTotal();
+
+        } catch (error) {
+
+            alert(error.message);
+
+        } finally {
+
+            button.disabled = false;
+
         }
-
-        localStorage.setItem(
-            favoriteStorageKey,
-            JSON.stringify(savedFavorites)
-        );
-
-        updateFavoriteUI();
-        applyResourceFilters();
     });
+
 });
 
-document.getElementById('sortResources')
-    .addEventListener('change', event => {
-        const grid = document.getElementById('resourceGrid');
-        const cards = [...grid.querySelectorAll('.resource-card')];
+// Calculate favorite count from currently displayed cards
+function updateFavoriteTotal() {
+    const totalElement = document.getElementById('totalFavorites');
 
-        const mode = event.target.value;
+    if (!totalElement) return;
 
-        cards.sort((a, b) => {
-            if (mode === 'az') {
-                return a.dataset.title.localeCompare(b.dataset.title);
-            }
+    const cards = document.querySelectorAll('.resource-card');
 
-            if (mode === 'favorites') {
-                return Number(b.querySelector('.favorite-btn span').textContent) -
-                       Number(a.querySelector('.favorite-btn span').textContent);
-            }
+    let total = 0;
 
-            return b.dataset.date.localeCompare(a.dataset.date);
-        });
-
-        cards.forEach(card => grid.appendChild(card));
+    cards.forEach(card => {
+        total += Number(card.dataset.favorites || 0);
     });
+
+    totalElement.textContent = total;
+}

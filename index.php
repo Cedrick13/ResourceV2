@@ -44,6 +44,15 @@ foreach ($resources as $resource) {
 $totalResources = count($resources);
 $totalCategories = count($categories);
 
+
+// Total favorites across all resources
+$totalFavorites = array_sum(
+    array_map(
+        fn($resource) => (int)($resource['favorites'] ?? 0),
+        $resources
+    )
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -96,6 +105,18 @@ $totalCategories = count($categories);
                         <p>Total Categories</p>
                     </div>
                 </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                <div>
+                    
+        <h3 id="totalFavorites"><?= $totalFavorites ?></h3>
+        <p>Total Favorites</p>
+    </div>
+</div>
 
             </div>
 
