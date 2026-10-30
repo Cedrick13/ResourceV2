@@ -30,7 +30,7 @@
 
 <section class="hero">
     <div class="hero-content">
-        <span class="eyebrow">CED / CODE RESOURCES</span>
+        <span class="eyebrow">CED | RESOURCES</span>
 
         <h1>Design & Code Resources</h1>
 
