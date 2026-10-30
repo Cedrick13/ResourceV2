@@ -5,7 +5,7 @@
         <small>RESOURCE LIBRARY</small>
     </a>
 
-    <nav class="top-nav">
+    <!--<nav class="top-nav">
         <a href="#resources" class="active">
             <i class="fa-regular fa-circle"></i>
             Resources
@@ -18,7 +18,7 @@
             <i class="fa-regular fa-star"></i>
             Favorites
         </a>
-    </nav>
+    </nav>-->
 
     <a href="https://ced-portfolio.vercel.app/"
        target="_blank"
