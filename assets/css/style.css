@@ -376,3 +376,98 @@ button, input, select {
     border-top: 1px solid var(--border);
     font-size: 12px;
 }
+
+
+/* ========================================
+   RESOURCE STATISTICS
+======================================== */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 190px));
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    padding: 16px;
+
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #173a59;
+    color: var(--accent);
+
+    border-radius: 9px;
+    font-size: 17px;
+}
+
+.stat-card h3 {
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+/* CATEGORY COUNT */
+
+.category-btn small {
+    min-width: 23px;
+    text-align: center;
+
+    background: rgba(101, 183, 232, 0.12);
+    color: var(--accent);
+
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.category-btn.active small {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-card {
+        padding: 12px;
+        gap: 9px;
+    }
+
+    .stat-card h3 {
+        font-size: 19px;
+    }
+}
+
