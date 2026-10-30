@@ -1,7 +1,7 @@
 
 <footer class="site-footer">
     <p>
-        &copy; <?= date('Y') ?> Cedrick Embestro.
-        Resource Library. All rights reserved.
+        &copy; <?= date('Y') ?> Ced | 
+        Resources. All rights reserved.
     </p>
 </footer>
