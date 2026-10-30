@@ -1,0 +1,80 @@
+
+@media (max-width: 1100px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        padding: 15px 4%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .top-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+        padding: 18px 4%;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar-menu h3 {
+        width: 100%;
+    }
+
+    .category-btn {
+        width: auto;
+        flex: 1 1 120px;
+    }
+
+    .quick-tip {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar select {
+        padding: 12px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .brand small {
+        font-size: 9px;
+    }
+
+    .portfolio-btn {
+        padding: 8px;
+    }
+}
