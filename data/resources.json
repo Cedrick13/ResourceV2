@@ -383,5 +383,27 @@
         "url": "https://cssgridgenerator.io/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 36,
+        "title": "Image Online",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A web toolkit for online image editing, conversion, resizing, and manipulation.",
+        "image": "assets/images/thumbnails/imageonline.png",
+        "url": "https://imageonline.co/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 37,
+        "title": "Image Color Picker",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A tool that lets you upload or point to an image to extract exact color codes and palettes.",
+        "image": "assets/images/thumbnails/colorpicker.png",
+        "url": "https://imagecolorpicker.com/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
