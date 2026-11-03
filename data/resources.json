@@ -515,5 +515,60 @@
         "url": "https://www.justinmind.com/design-templates",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 48,
+        "title": "DevDocs",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A combined API documentation aggregator that groups multiple technical documentation formats into a fast, organized, searchable interface.",
+        "image": "assets/images/thumbnails/DevDocs.png",
+        "url": "https://devdocs.io/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 49,
+        "title": "Roadmap.sh",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A community-driven platform providing comprehensive career path roadmaps, guides, and educational steps for software developers.",
+        "image": "assets/images/thumbnails/roadmap.png",
+        "url": "https://roadmap.sh/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 50,
+        "title": "Resume Builder",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "An open-source, feature-rich resume builder designed to help professionals create clean, professional CVs quickly.",
+        "image": "assets/images/thumbnails/resume builder.png",
+        "url": "https://rxresu.me/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 51,
+        "title": "BeautifyCode",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A development utility used to format, clean up, and prettify messy source code blocks.",
+        "image": "assets/images/thumbnails/beautifycode.png",
+        "url": "https://beautifycode.net/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 52,
+        "title": "iFixit",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A global community repair guide and troubleshooting database featuring step-by-step repair manuals for hardware, gadgets, and electronics.",
+        "image": "assets/images/thumbnails/ifixit.png",
+        "url": "https://www.ifixit.com/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
