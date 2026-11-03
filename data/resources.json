@@ -449,5 +449,49 @@
         "url": "https://webflow.com/templates/free-website-templates",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 42,
+        "title": "HTML Rev",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A curated directory of free HTML landing page templates and multi-page website designs.",
+        "image": "assets/images/thumbnails/htmlrev.png",
+        "url": "https://htmlrev.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 43,
+        "title": "CodeInfoWeb",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A platform offering web design templates, code examples, and front-end development tutorials.",
+        "image": "assets/images/thumbnails/codeinfoweb.png",
+        "url": "https://www.codeinfoweb.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 44,
+        "title": "SourceCodester",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A developer community sharing free source code, projects, scripts, and full web application templates.",
+        "image": "assets/images/thumbnails/sourcecode.png",
+        "url": "https://www.sourcecodester.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 45,
+        "title": "Figma Community",
+        "category": "ui-kits",
+        "category_name": "UI Kits",
+        "description": "A collaborative hub where designers share free UI kits, design systems, wireframe templates, and plugins.",
+        "image": "assets/images/thumbnails/figma comm.png",
+        "url": "https://www.figma.com/community",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
