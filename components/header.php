@@ -1,7 +1,9 @@
 
 <header class="top-header">
     <a href="index.php" class="brand">
-        <span>CED</span>
+        <img src="assets/images/icons/icon.png" alt="CED Logo">
+
+        <!--<span>CED</span>-->
         <small>RESOURCE LIBRARY</small>
     </a>
 
@@ -30,7 +32,7 @@
 
 <section class="hero">
     <div class="hero-content">
-        <span class="eyebrow">CED | RESOURCES</span>
+        <span class="eyebrow">RESOURCES | TOOLS HUB</span>
 
         <h1>Design & Code Resources</h1>
 

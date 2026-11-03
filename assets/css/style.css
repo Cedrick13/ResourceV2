@@ -46,6 +46,19 @@ button, input, select {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.brand div {
+    display: flex;
+    flex-direction: column;
 }
 
 .brand span {
