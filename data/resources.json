@@ -592,5 +592,60 @@
         "url": "https://www.torrentdownloads.pro/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 55,
+        "title": "TinyWow",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A free online utility suite offering automated tools for converting files, editing PDFs, compressing images, and editing videos.",
+        "image": "assets/images/thumbnails/tinywow.png",
+        "url": "https://tinywow.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 56,
+        "title": "Exercism",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "An online coding practice and mentorship platform offering programming exercises across dozens of languages.",
+        "image": "assets/images/thumbnails/exercism.png",
+        "url": "https://exercism.org/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 57,
+        "title": "FixResume",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An optimization utility and checker to review and refine resumes for ATS (Applicant Tracking Systems) compatibility.",
+        "image": "assets/images/thumbnails/fixresume.png",
+        "url": "https://fixresume.io/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 58,
+        "title": "Ninite",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An automated installer and updater utility that lets you safely download and install multiple essential Windows apps at once without bloatware.",
+        "image": "assets/images/thumbnails/ninite.png",
+        "url": "https://ninite.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 59,
+        "title": "Have I Been Pwned",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A security service that allows users to check if their personal email addresses, passwords, or data have been compromised in a data breach.",
+        "image": "assets/images/thumbnails/haveibeenpwned.png",
+        "url": "https://haveibeenpwned.com/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
