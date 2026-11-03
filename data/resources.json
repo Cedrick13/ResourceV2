@@ -339,5 +339,49 @@
         "url": "https://omatsuri.app/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 32,
+        "title": "Knowledge Walls Tools",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A collection of free online developer utilities and mini-tools for web building.",
+        "image": "assets/images/thumbnails/Knowledge Walls.png",
+        "url": "https://tools.knowledgewalls.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 33,
+        "title": "W3Schools",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A premier web developer training and documentation site featuring tutorials, code references, and interactive examples.",
+        "image": "assets/images/thumbnails/w3school.png",
+        "url": "https://www.w3schools.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 34,
+        "title": "HTML Color Codes",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "A reference resource for standard HTML color codes, hex values, and web-safe color palettes.",
+        "image": "assets/images/thumbnails/computerhope.png",
+        "url": "https://www.computerhope.com/htmcolor.htm",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 35,
+        "title": "CSS Grid Generator",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A visual tool that lets you design complex CSS grids and instantly copies the generated code for your project.",
+        "image": "assets/images/thumbnails/cssgridgenerator.png",
+        "url": "https://cssgridgenerator.io/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
