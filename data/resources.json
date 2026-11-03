@@ -405,5 +405,49 @@
         "url": "https://imagecolorpicker.com/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 38,
+        "title": "HTML5 UP",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A collection of responsive HTML5 and CSS3 site templates that are fully customizable, modern, and free for personal and commercial use.",
+        "image": "assets/images/thumbnails/html 5.png",
+        "url": "https://html5up.net/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 39,
+        "title": "UI Deck",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "High-quality free and premium HTML landing page templates, UI kits, and bootstrap themes for startups and businesses.",
+        "image": "assets/images/thumbnails/uideck.png",
+        "url": "https://uideck.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 40,
+        "title": "TemplateMo",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A large library of free CSS and HTML website templates suitable for portfolios, blogs, and corporate sites.",
+        "image": "assets/images/thumbnails/tempmo.png",
+        "url": "https://templatemo.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 41,
+        "title": "Webflow Templates",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A collection of free website layouts and design frameworks built specifically for the Webflow no-code platform.",
+        "image": "assets/images/thumbnails/webflow.png",
+        "url": "https://webflow.com/templates/free-website-templates",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
