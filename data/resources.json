@@ -229,5 +229,38 @@
         "url": "https://www.color-name.com/",
         "date": "2026-10-30",
         "favorites": 0
+    },
+    {
+        "id": 22,
+        "title": "Uiverse.io",
+        "category": "ui-kits",
+        "category_name": "UI Kits",
+        "description": "A community-made repository of open-source UI elements, buttons, cards, and checkboxes built purely with CSS and HTML.",
+        "image": "assets/images/thumbnails/uiverse.png",
+        "url": "https://uiverse.io",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 23,
+        "title": "Shapedivider.app",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A handy tool for generating custom SVG shape dividers to transition smoothly between sections on web pages.",
+        "image": "assets/images/thumbnails/shapedivider.png",
+        "url": "https://www.shapedivider.app",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 24,
+        "title": "Animate.style",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A cross-browser library of ready-to-use, easy-to-implement CSS animations.",
+        "image": "assets/images/thumbnails/animate.png",
+        "url": "https://animate.style",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
