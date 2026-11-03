@@ -570,5 +570,27 @@
         "url": "https://www.ifixit.com/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 53,
+        "title": "FTU Apps",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "A software distribution platform offering application downloads and updates.",
+        "image": "assets/images/thumbnails/ftuapps.png",
+        "url": "https://ftuapps1.farlad.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 54,
+        "title": "Torrent Downloads",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "A peer-to-peer file sharing and index directory for downloading large software, media, and digital files.",
+        "image": "assets/images/thumbnails/torrent.png",
+        "url": "https://www.torrentdownloads.pro/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
