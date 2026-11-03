@@ -34,11 +34,11 @@
     <div class="hero-content">
         <span class="eyebrow">RESOURCES | TOOLS HUB</span>
 
-        <h1>Design & Code Resources</h1>
+        <h1>Your Digital Toolbox, All in One Place.</h1>
 
         <p>
-            A collection of UI kits, design systems, useful snippets,
-            and digital assets to build faster.
+            Discover a curated collection of useful websites, creative tools, design inspiration, development resources, templates,
+            and essential utilities to help you create, build, learn, and work smarter.
         </p>
 
         <div class="hero-tags">
