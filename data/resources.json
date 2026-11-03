@@ -262,5 +262,82 @@
         "url": "https://animate.style",
         "date": "2026-11-03",
         "favorites": 0
+    },
+    {
+        "id": 25,
+        "title": "Animate on scroll library",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A lightweight JavaScript library (AOS) used to animate elements as you scroll down a webpage.",
+        "image": "assets/images/thumbnails/aos.png",
+        "url": "https://michalsnik.github.io/aos/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 26,
+        "title": "CSS Stripes Generator",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A quick utility tool to generate customized CSS stripod/striped background patterns.",
+        "image": "assets/images/thumbnails/CSS Stripes Generator.png",
+        "url": "https://stripesgenerator.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 27,
+        "title": "Font Awesome",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "A popular icon toolkit and font library providing vector icons and logos for web development.",
+        "image": "assets/images/thumbnails/fontawesome.png",
+        "url": "https://fontawesome.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 28,
+        "title": "Font Awesome v4 Icons",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "The legacy version 4 icon reference guide and search directory for Font Awesome icons.",
+        "image": "assets/images/thumbnails/fontawesomeicon.png",
+        "url": "https://fontawesome.com/v4/icons/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 29,
+        "title": "CSS.gg",
+        "category": "assets",
+        "category_name": "Assets",
+        "description": "An open-source collection of CSS-crafted, SVG-ready UI icons that are lightweight and easy to integrate.",
+        "image": "assets/images/thumbnails/css.gg.png",
+        "url": "https://css.gg/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 30,
+        "title": "W3Docs",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A web programming tutorial and reference platform offering guides for HTML, CSS, JavaScript, and PHP.",
+        "image": "assets/images/thumbnails/w3docs.png",
+        "url": "https://www.w3docs.com/",
+        "date": "2026-11-03",
+        "favorites": 0
+    },
+    {
+        "id": 31,
+        "title": "Omatsuri",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A collection of open-source browser tools for web developers, including generators for CSS shapes, gradients, and shadows.",
+        "image": "assets/images/thumbnails/omatsuri.png",
+        "url": "https://omatsuri.app/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
