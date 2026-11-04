@@ -1,4 +1,5 @@
 <?php
 
-// ResourceV2 application entry point
-require_once __DIR__ . '/../index.php';
+echo "ResourceV2 PHP Runtime Working!";
+echo "<br>";
+echo "PHP Version: " . PHP_VERSION;
