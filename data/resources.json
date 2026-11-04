@@ -511,7 +511,7 @@
         "category": "ui-kits",
         "category_name": "UI Kits",
         "description": "A prototyping and wireframing tool resource featuring pre-built design templates and mobile UI components.",
-        "image": "assets/images/thumbnails/Justinmind.png",
+        "image": "assets/images/thumbnails/justinmind.png",
         "url": "https://www.justinmind.com/design-templates",
         "date": "2026-11-03",
         "favorites": 0
@@ -522,7 +522,7 @@
         "category": "code-snippets",
         "category_name": "Code Snippets",
         "description": "A combined API documentation aggregator that groups multiple technical documentation formats into a fast, organized, searchable interface.",
-        "image": "assets/images/thumbnails/DevDocs.png",
+        "image": "assets/images/thumbnails/devdocs.png",
         "url": "https://devdocs.io/",
         "date": "2026-11-03",
         "favorites": 0
