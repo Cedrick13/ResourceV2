@@ -1,0 +1,30 @@
+
+# =========================================
+# RESOURCEV2 - PRODUCTION SECURITY
+# =========================================
+
+# Disable directory listing
+Options -Indexes
+
+# Prevent access to hidden files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Protect sensitive project files
+<FilesMatch "(^README\.md$|^composer\.(json|lock)$|^package(-lock)?\.json$|^\.env$|^\.gitignore$|^\.htaccess$|\.bak$|\.log$|\.sql$|\.ini$|\.conf$|\.dist$|~$)">
+    Require all denied
+</FilesMatch>
+
+# Prevent access to internal data and configuration
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(data|config|private|backups|logs|includes)/ - [F,L,NC]
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+</IfModule>
+
+# Prevent PHP errors from exposing server information
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+</IfModule>
