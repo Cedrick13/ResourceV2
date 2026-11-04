@@ -284,6 +284,41 @@ button, input, select {
     margin-top: 6px;
 }
 
+/* VIEW MORE RESOURCES */
+
+.resource-hidden {
+    display: none !important;
+}
+
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 15px;
+}
+
+.view-more-btn {
+    min-width: 120px;
+    padding: 10px 24px;
+
+    background: #f1f1f1;
+    color: #171717;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.view-more-btn:hover {
+    background: var(--accent);
+    color: #071426;
+    transform: translateY(-2px);
+}
+
 #resourceCount {
     color: var(--muted);
     font-size: 12px;

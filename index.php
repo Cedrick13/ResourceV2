@@ -157,15 +157,26 @@ $totalFavorites = array_sum(
             </div>
 
             <!-- RESOURCE CARDS -->
-            <div class="resource-grid" id="resourceGrid">
+<div class="resource-grid" id="resourceGrid">
+    <?php foreach ($resources as $index => $resource): ?>
+        <?php
+            $isHidden = $index >= 9;
+        ?>
 
-                <?php foreach ($resources as $resource): ?>
+        <div class="resource-item <?= $isHidden ? 'resource-hidden' : '' ?>">
+            <?php include 'components/resource-card.php'; ?>
+        </div>
 
-                    <?php include __DIR__ . '/components/resource-card.php'; ?>
+    <?php endforeach; ?>
+</div>
 
-                <?php endforeach; ?>
-
-            </div>
+<?php if (count($resources) > 9): ?>
+    <div class="view-more-container">
+        <button type="button" id="viewMoreBtn" class="view-more-btn">
+            View more
+        </button>
+    </div>
+<?php endif; ?>
 
             <!-- EMPTY STATE -->
             <div class="empty-state" id="emptyState" hidden>

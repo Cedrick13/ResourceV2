@@ -110,3 +110,45 @@ function updateFavoriteTotal() {
 
     totalElement.textContent = total;
 }
+
+// VIEW MORE RESOURCES
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+
+    if (!viewMoreBtn) return;
+
+    const batchSize = 9;
+
+    viewMoreBtn.addEventListener('click', function () {
+
+        const hiddenResources = document.querySelectorAll(
+            '#resourceGrid .resource-hidden'
+        );
+
+        let count = 0;
+
+        hiddenResources.forEach(function (resource) {
+            if (count < batchSize) {
+                resource.classList.remove('resource-hidden');
+                count++;
+            }
+        });
+
+        // Hide button when no more resources remain
+        if (
+            document.querySelectorAll(
+                '#resourceGrid .resource-hidden'
+            ).length === 0
+        ) {
+            viewMoreBtn.style.display = 'none';
+        }
+
+        if (typeof applyResourceFilters === 'function') {
+            applyResourceFilters();
+        }
+
+    });
+
+});

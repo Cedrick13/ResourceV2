@@ -2,6 +2,15 @@
 let activeCategory = 'all';
 let favoritesOnly = false;
 
+const RESOURCES_PER_PAGE = 9;
+let visibleLimit = RESOURCES_PER_PAGE;
+
+const resourceGrid = document.getElementById('resourceGrid');
+const resourceSearch = document.getElementById('resourceSearch');
+const resourceCount = document.getElementById('resourceCount');
+const emptyState = document.getElementById('emptyState');
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+
 document.querySelectorAll('.category-btn').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.category-btn')
@@ -11,54 +20,114 @@ document.querySelectorAll('.category-btn').forEach(button => {
 
         activeCategory = button.dataset.category;
         favoritesOnly = false;
+        visibleLimit = RESOURCES_PER_PAGE;
 
         applyResourceFilters();
     });
 });
 
-document.getElementById('showFavorites')
-    .addEventListener('click', () => {
-        favoritesOnly = true;
-        activeCategory = 'all';
+document.getElementById('showFavorites')?.addEventListener('click', () => {
+    favoritesOnly = true;
+    activeCategory = 'all';
+    visibleLimit = RESOURCES_PER_PAGE;
 
-        document.querySelectorAll('.category-btn')
-            .forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.category-btn')
+        .forEach(btn => btn.classList.remove('active'));
 
-        document.querySelector('[data-category="all"]')
-            .classList.add('active');
+    document.querySelector('[data-category="all"]')
+        ?.classList.add('active');
 
-        applyResourceFilters();
-    });
+    applyResourceFilters();
+});
+
+// SEARCH
+resourceSearch?.addEventListener('input', () => {
+    visibleLimit = RESOURCES_PER_PAGE;
+    applyResourceFilters();
+});
+
+// VIEW MORE
+viewMoreBtn?.addEventListener('click', () => {
+    visibleLimit += RESOURCES_PER_PAGE;
+    applyResourceFilters();
+});
 
 function applyResourceFilters() {
-    const query = document.getElementById('resourceSearch')
-        .value.toLowerCase();
+    const query = resourceSearch.value.toLowerCase().trim();
 
-    const cards = [...document.querySelectorAll('.resource-card')];
+    const cards = [
+        ...resourceGrid.querySelectorAll('.resource-item')
+    ];
 
-    cards.forEach(card => {
+    let matchingCards = [];
+
+    cards.forEach(item => {
+        const card = item.querySelector('.resource-card');
+
+        if (!card) return;
+
         const categoryMatch =
             activeCategory === 'all' ||
             card.dataset.category === activeCategory;
 
-        const searchMatch =
-            card.dataset.title.toLowerCase().includes(query) ||
+        const title = card.dataset.title?.toLowerCase() || '';
+
+        const description =
             card.querySelector('.card-description')
-                .textContent.toLowerCase().includes(query);
+                ?.textContent.toLowerCase() || '';
+
+        const searchMatch =
+            title.includes(query) ||
+            description.includes(query);
 
         const favoriteMatch =
             !favoritesOnly ||
             card.querySelector('.favorite-btn')
-                .classList.contains('is-favorite');
+                ?.classList.contains('is-favorite');
 
-        card.hidden = !(categoryMatch && searchMatch && favoriteMatch);
+        const matches =
+            categoryMatch && searchMatch && favoriteMatch;
+
+        item.dataset.matches = matches ? 'true' : 'false';
+
+        if (matches) {
+            matchingCards.push(item);
+        }
     });
 
-    const visibleCount = cards.filter(card => !card.hidden).length;
+    // Show only the allowed number of matching resources
+    matchingCards.forEach((item, index) => {
+        item.classList.toggle(
+            'resource-hidden',
+            index >= visibleLimit
+        );
+    });
 
-    document.getElementById('resourceCount').textContent =
-        `${visibleCount} Resources`;
+    // Hide cards that do not match filters
+    cards.forEach(item => {
+        if (item.dataset.matches !== 'true') {
+            item.classList.add('resource-hidden');
+        }
+    });
 
-    document.getElementById('emptyState').hidden =
-        visibleCount !== 0;
+    const visibleCount = Math.min(
+        matchingCards.length,
+        visibleLimit
+    );
+
+    resourceCount.textContent =
+        `${visibleCount} of ${matchingCards.length} Resources`;
+
+    emptyState.hidden = matchingCards.length !== 0;
+
+    // View More button visibility
+    if (viewMoreBtn) {
+        viewMoreBtn.style.display =
+            matchingCards.length > visibleLimit
+                ? 'inline-flex'
+                : 'none';
+    }
 }
+
+// INITIAL FILTER
+applyResourceFilters();
