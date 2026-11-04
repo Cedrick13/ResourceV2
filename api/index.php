@@ -3,18 +3,19 @@
 
 declare(strict_types=1);
 
-// Set project root directory
+// ResourceV2 root directory
 $root = dirname(__DIR__);
 
-// Set working directory to ResourceV2 root
+// Set working directory
 chdir($root);
 
-// Load the main website
+// Main application
 $mainFile = $root . '/index.php';
 
-if (!file_exists($mainFile)) {
+if (!is_file($mainFile)) {
     http_response_code(500);
-    exit('Error: Main index.php not found.');
+    exit('ResourceV2: Main index.php not found.');
 }
 
+// Render website
 require $mainFile;
