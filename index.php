@@ -146,7 +146,7 @@ $totalFavorites = array_sum(
             <div class="section-heading">
             
                 <div>
-                    <h2 id="resourceSectionTitle">All Resources</h2>
+                    <h2 id="resourceSectionTitle">Explore the Library</h2>
                     <p id="resourceSectionDescription">
                         Discover useful tools and resources for your next project.
                     </p>
