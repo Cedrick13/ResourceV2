@@ -14,7 +14,7 @@ const viewMoreBtn = document.getElementById('viewMoreBtn');
 const sectionTitle = document.getElementById('resourceSectionTitle');
 const sectionDescription = document.getElementById('resourceSectionDescription');
 
-const DEFAULT_TITLE = 'All Resources';
+const DEFAULT_TITLE = 'Explore the Library';
 const DEFAULT_DESCRIPTION =
     'Discover useful tools and resources for your next project.';
 
@@ -43,16 +43,19 @@ document.querySelectorAll('.category-btn').forEach(button => {
         activeCategory = button.dataset.category;
         favoritesOnly = false;
         visibleLimit = RESOURCES_PER_PAGE;
-
+        
         const categoryName =
             button.dataset.name || 'All Resources';
-
+        
         if (activeCategory === 'all') {
-            updateSectionHeading(DEFAULT_TITLE, DEFAULT_DESCRIPTION);
+            updateSectionHeading(
+                'Explore the Library',
+                'Browse our curated collection of design and development resources.'
+            );
         } else {
             updateSectionHeading(
                 categoryName,
-                `Explore ${categoryName} and discover useful resources.`
+                `Explore our ${categoryName.toLowerCase()} collection.`
             );
         }
 
@@ -73,11 +76,11 @@ document.getElementById('showFavorites')?.addEventListener('click', () => {
     document.querySelector('[data-category="all"]')
         ?.classList.add('active');
 
-    updateSectionHeading(
-        'My Favorites',
-        'Your saved resources, all in one place.'
-    );
-
+        updateSectionHeading(
+            'Your Saved Resources',
+            'All your favorite resources in one place.'
+        );
+        
     applyResourceFilters();
 });
 
