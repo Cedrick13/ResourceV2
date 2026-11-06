@@ -647,5 +647,16 @@
         "url": "https://haveibeenpwned.com/",
         "date": "2026-11-03",
         "favorites": 0
+    },
+        {
+        "id": 60,
+        "title": "Coderscreen",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "A modern, open-source technical hiring and interview platform that allows engineering teams to conduct live coding interviews, auto-graded technical assessments, and take-home tests.",
+        "image": "assets/images/thumbnails/coderscreen.png",
+        "url": "https://coderscreen.com/",
+        "date": "2026-11-03",
+        "favorites": 0
     }
 ]
