@@ -11,8 +11,30 @@ const resourceCount = document.getElementById('resourceCount');
 const emptyState = document.getElementById('emptyState');
 const viewMoreBtn = document.getElementById('viewMoreBtn');
 
+const sectionTitle = document.getElementById('resourceSectionTitle');
+const sectionDescription = document.getElementById('resourceSectionDescription');
+
+const DEFAULT_TITLE = 'All Resources';
+const DEFAULT_DESCRIPTION =
+    'Discover useful tools and resources for your next project.';
+
+// Update section heading and browser tab
+function updateSectionHeading(title, description) {
+    if (sectionTitle) {
+        sectionTitle.textContent = title;
+    }
+
+    if (sectionDescription) {
+        sectionDescription.textContent = description;
+    }
+
+    document.title = `${title} | ResourceV2`;
+}
+
+// CATEGORY FILTER
 document.querySelectorAll('.category-btn').forEach(button => {
     button.addEventListener('click', () => {
+
         document.querySelectorAll('.category-btn')
             .forEach(btn => btn.classList.remove('active'));
 
@@ -22,11 +44,25 @@ document.querySelectorAll('.category-btn').forEach(button => {
         favoritesOnly = false;
         visibleLimit = RESOURCES_PER_PAGE;
 
+        const categoryName =
+            button.dataset.name || 'All Resources';
+
+        if (activeCategory === 'all') {
+            updateSectionHeading(DEFAULT_TITLE, DEFAULT_DESCRIPTION);
+        } else {
+            updateSectionHeading(
+                categoryName,
+                `Explore ${categoryName} and discover useful resources.`
+            );
+        }
+
         applyResourceFilters();
     });
 });
 
+// FAVORITES FILTER
 document.getElementById('showFavorites')?.addEventListener('click', () => {
+
     favoritesOnly = true;
     activeCategory = 'all';
     visibleLimit = RESOURCES_PER_PAGE;
@@ -36,6 +72,11 @@ document.getElementById('showFavorites')?.addEventListener('click', () => {
 
     document.querySelector('[data-category="all"]')
         ?.classList.add('active');
+
+    updateSectionHeading(
+        'My Favorites',
+        'Your saved resources, all in one place.'
+    );
 
     applyResourceFilters();
 });
@@ -52,8 +93,10 @@ viewMoreBtn?.addEventListener('click', () => {
     applyResourceFilters();
 });
 
+// APPLY FILTERS
 function applyResourceFilters() {
-    const query = resourceSearch.value.toLowerCase().trim();
+
+    const query = resourceSearch?.value.toLowerCase().trim() || '';
 
     const cards = [
         ...resourceGrid.querySelectorAll('.resource-item')
@@ -62,6 +105,7 @@ function applyResourceFilters() {
     let matchingCards = [];
 
     cards.forEach(item => {
+
         const card = item.querySelector('.resource-card');
 
         if (!card) return;
@@ -95,7 +139,7 @@ function applyResourceFilters() {
         }
     });
 
-    // Show only the allowed number of matching resources
+    // Show matching resources according to View More limit
     matchingCards.forEach((item, index) => {
         item.classList.toggle(
             'resource-hidden',
@@ -103,7 +147,7 @@ function applyResourceFilters() {
         );
     });
 
-    // Hide cards that do not match filters
+    // Hide non-matching resources
     cards.forEach(item => {
         if (item.dataset.matches !== 'true') {
             item.classList.add('resource-hidden');
@@ -115,12 +159,16 @@ function applyResourceFilters() {
         visibleLimit
     );
 
-    resourceCount.textContent =
-        `${visibleCount} of ${matchingCards.length} Resources`;
+    if (resourceCount) {
+        resourceCount.textContent =
+            `${visibleCount} of ${matchingCards.length} Resources`;
+    }
 
-    emptyState.hidden = matchingCards.length !== 0;
+    if (emptyState) {
+        emptyState.hidden = matchingCards.length !== 0;
+    }
 
-    // View More button visibility
+    // View More visibility
     if (viewMoreBtn) {
         viewMoreBtn.style.display =
             matchingCards.length > visibleLimit
@@ -129,5 +177,6 @@ function applyResourceFilters() {
     }
 }
 
-// INITIAL FILTER
+// INITIALIZE
+updateSectionHeading(DEFAULT_TITLE, DEFAULT_DESCRIPTION);
 applyResourceFilters();

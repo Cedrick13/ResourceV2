@@ -78,6 +78,10 @@ document.querySelectorAll('.resource-card').forEach(card => {
 
             updateUI(action === 'add');
 
+            if (typeof applyResourceFilters === 'function') {
+                applyResourceFilters();
+            }
+
             // Update total dashboard statistics if present
             updateFavoriteTotal();
 

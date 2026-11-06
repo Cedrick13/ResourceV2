@@ -144,16 +144,18 @@ $totalFavorites = array_sum(
 
             <!-- SECTION HEADING -->
             <div class="section-heading">
-
+            
                 <div>
-                    <h2>Explore Resources</h2>
-                    <p>Discover useful tools and resources for your next project.</p>
+                    <h2 id="resourceSectionTitle">All Resources</h2>
+                    <p id="resourceSectionDescription">
+                        Discover useful tools and resources for your next project.
+                    </p>
                 </div>
-
+            
                 <span id="resourceCount">
                     <?= $totalResources ?> Resources
                 </span>
-
+            
             </div>
 
             <!-- RESOURCE CARDS -->
@@ -195,7 +197,6 @@ $totalFavorites = array_sum(
 
     <?php include __DIR__ . '/components/footer.php'; ?>
 
-    <script src="assets/js/search.js"></script>
     <script src="assets/js/filters.js"></script>
     <script src="assets/js/main.js"></script>
 

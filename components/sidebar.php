@@ -6,16 +6,17 @@
         <h3>LIBRARY</h3>
 
         <!-- ALL RESOURCES -->
-        <button class="category-btn active" data-category="all">
-
+        <button
+            class="category-btn active"
+            data-category="all"
+            data-name="All Resources">
+        
             <i class="fa-solid fa-grip"></i>
-
             <span>All Resources</span>
-
             <small><?= $totalResources ?></small>
-
+        
         </button>
-
+        
         <!-- AUTOMATIC CATEGORY COUNTS -->
         <?php foreach ($categories as $category): ?>
 
@@ -24,20 +25,18 @@
                 $count = $categoryCounts[$slug] ?? 0;
             ?>
 
-            <button
-                class="category-btn"
-                data-category="<?= htmlspecialchars($slug) ?>"
-            >
+        <button
+            class="category-btn"
+            data-category="<?= htmlspecialchars($slug) ?>"
+            data-name="<?= htmlspecialchars($category['name']) ?>">
 
-                <i class="<?= htmlspecialchars($category['icon']) ?>"></i>
+            <i class="<?= htmlspecialchars($category['icon']) ?>"></i>
 
-                <span>
-                    <?= htmlspecialchars($category['name']) ?>
-                </span>
+            <span><?= htmlspecialchars($category['name']) ?></span>
 
-                <small><?= $count ?></small>
+            <small><?= $count ?></small>
 
-            </button>
+        </button>
 
         <?php endforeach; ?>
 
