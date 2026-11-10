@@ -164,43 +164,6 @@ $totalFavorites = array_sum(
 
             <!-- SEARCH AND SORT -->
             <div class="toolbar">
-                
-                <!-- ========================================
-                    LATEST ADDITIONS
-                ======================================== -->
-                
-                <section class="latest-section">
-                
-                    <div class="section-heading">
-                
-                        <div>
-                            <h2>Latest Additions</h2>
-                
-                            <p>
-                                Discover the newest resources added to the library.
-                            </p>
-                        </div>
-                
-                        <span>
-                            <i class="fa-solid fa-clock"></i>
-                            Recently Added
-                        </span>
-                
-                    </div>
-                
-                    <div class="resource-grid latest-grid">
-                
-                        <?php foreach ($latestResources as $resource): ?>
-                
-                            <div class="resource-item">
-                                <?php include __DIR__ . '/components/resource-card.php'; ?>
-                            </div>
-                
-                        <?php endforeach; ?>
-                
-                    </div>
-                
-                </section>
 
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -219,6 +182,40 @@ $totalFavorites = array_sum(
                 </select>
 
             </div>
+            
+            <!-- LATEST ADDITIONS -->
+            <section class="latest-section">
+            
+                <div class="section-heading">
+            
+                    <div>
+                        <h2>Latest Additions</h2>
+            
+                        <p>
+                            Discover the newest resources added to the library.
+                        </p>
+                    </div>
+            
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        Recently Added
+                    </span>
+            
+                </div>
+            
+                <div class="resource-grid latest-grid">
+            
+                    <?php foreach ($latestResources as $resource): ?>
+            
+                        <div class="resource-item">
+                            <?php include __DIR__ . '/components/resource-card.php'; ?>
+                        </div>
+            
+                    <?php endforeach; ?>
+            
+                </div>
+            
+            </section>
 
             <!-- SECTION HEADING -->
             <div class="section-heading">
