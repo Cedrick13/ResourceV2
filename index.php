@@ -2,29 +2,6 @@
 <?php
 
 // ========================================
-// CLEAN PAGE SOURCE
-// ========================================
-
-function clean_page_source($buffer) {
-
-    // Remove regular HTML comments
-    $buffer = preg_replace(
-        '/<!--(?!\[if).*?-->/s',
-        '',
-        $buffer
-    );
-
-    // Remove unnecessary whitespace between HTML tags
-    $buffer = preg_replace('/>\s+</', '><', $buffer);
-
-    return trim($buffer);
-}
-
-// Start output buffering
-ob_start('clean_page_source');
-
-
-// ========================================
 // RESOURCE DATA
 // ========================================
 
@@ -37,13 +14,11 @@ if (file_exists($resourcesFile)) {
     $resources = json_decode($jsonData, true) ?? [];
 }
 
-
 // ========================================
 // CATEGORY DATA
 // ========================================
 
 $categories = require __DIR__ . '/data/categories.php';
-
 
 // ========================================
 // AUTOMATIC CATEGORY COUNT
@@ -62,7 +37,6 @@ foreach ($resources as $resource) {
     $categoryCounts[$slug]++;
 }
 
-
 // ========================================
 // TOTAL COUNTS
 // ========================================
@@ -70,6 +44,8 @@ foreach ($resources as $resource) {
 $totalResources = count($resources);
 $totalCategories = count($categories);
 
+
+// Total favorites across all resources
 $totalFavorites = array_sum(
     array_map(
         fn($resource) => (int)($resource['favorites'] ?? 0),
@@ -87,7 +63,7 @@ $totalFavorites = array_sum(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Resource | All in One Place</title>
-
+    
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
     <link rel="icon" type="image/png" href="/assets/images/icons/icon.png">
@@ -136,11 +112,12 @@ $totalFavorites = array_sum(
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <div>
-                        <h3 id="totalFavorites"><?= $totalFavorites ?></h3>
-                        <p>Total Favorites</p>
-                    </div>
-                </div>
+                <div>
+                    
+        <h3 id="totalFavorites"><?= $totalFavorites ?></h3>
+        <p>Total Favorites</p>
+    </div>
+</div>
 
             </div>
 
@@ -167,45 +144,42 @@ $totalFavorites = array_sum(
 
             <!-- SECTION HEADING -->
             <div class="section-heading">
-
+            
                 <div>
                     <h2 id="resourceSectionTitle">All Resources</h2>
                     <p id="resourceSectionDescription">
                         Discover useful tools and resources for your next project.
                     </p>
                 </div>
-
+            
                 <span id="resourceCount">
                     <?= $totalResources ?> Resources
                 </span>
-
+            
             </div>
 
             <!-- RESOURCE CARDS -->
             <div class="resource-grid" id="resourceGrid">
-
                 <?php foreach ($resources as $index => $resource): ?>
-
-                    <?php $isHidden = $index >= 9; ?>
-
+                    <?php
+                        $isHidden = $index >= 9;
+                    ?>
+            
                     <div class="resource-item <?= $isHidden ? 'resource-hidden' : '' ?>">
-                        <?php include __DIR__ . '/components/resource-card.php'; ?>
+                        <?php include 'components/resource-card.php'; ?>
                     </div>
-
+            
                 <?php endforeach; ?>
-
             </div>
-
+            
             <?php if (count($resources) > 9): ?>
-
                 <div class="view-more-container">
                     <button type="button" id="viewMoreBtn" class="view-more-btn">
                         View more
                     </button>
                 </div>
-
             <?php endif; ?>
-
+            
             <!-- EMPTY STATE -->
             <div class="empty-state" id="emptyState" hidden>
 
@@ -223,9 +197,8 @@ $totalFavorites = array_sum(
 
     <?php include __DIR__ . '/components/footer.php'; ?>
 
-    <script src="/assets/js/search.js"></script>
-    <script src="/assets/js/filters.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
