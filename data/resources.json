@@ -669,5 +669,16 @@
         "url": "https://www.toools.design/",
         "date": "2026-11-10",
         "favorites": 0
+    },
+    {
+        "id": 62,
+        "title": "Trackee",
+        "category": "code-snippets",
+        "category_name": "Code Snippets",
+        "description": "An all-in-one SEO and AI visibility API that lets developers track brand rankings, mentions, citations, and share of voice across Google and major AI answer engines (ChatGPT, Claude, Gemini, Grok, and Perplexity).",
+        "image": "assets/images/thumbnails/Trackee.png",
+        "url": "https://www.trackee.dev/",
+        "date": "2026-11-10",
+        "favorites": 0
     }
 ]
