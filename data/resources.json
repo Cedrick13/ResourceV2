@@ -680,5 +680,16 @@
         "url": "https://www.trackee.dev/",
         "date": "2026-11-10",
         "favorites": 0
+    },
+    {
+        "id": 63,
+        "title": "Sourcetable",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An AI-powered spreadsheet and data analysis platform that allows users to query databases, clean data, and generate visualizations using natural language and built-in Python/SQL integrations.",
+        "image": "assets/images/thumbnails/Sourcetable.png",
+        "url": "https://sourcetable.com/",
+        "date": "2026-11-10",
+        "favorites": 0
     }
 ]
