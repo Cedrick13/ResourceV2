@@ -656,7 +656,18 @@
         "description": "A modern, open-source technical hiring and interview platform that allows engineering teams to conduct live coding interviews, auto-graded technical assessments, and take-home tests.",
         "image": "assets/images/thumbnails/coderscreen.png",
         "url": "https://coderscreen.com/",
-        "date": "2026-11-03",
+        "date": "2026-11-06",
+        "favorites": 0
+    },
+    {
+        "id": 61,
+        "title": "TOOOLS.design",
+        "category": "design-systems",
+        "category_name": "Design Systems",
+        "description": "A massively curated directory of hand-picked design tools, AI utilities, code generators, UI assets, and creative inspiration resources.",
+        "image": "assets/images/thumbnails/toools.design.png",
+        "url": "https://www.toools.design/",
+        "date": "2026-11-10",
         "favorites": 0
     }
 ]
