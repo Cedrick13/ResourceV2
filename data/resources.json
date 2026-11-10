@@ -691,5 +691,60 @@
         "url": "https://sourcetable.com/",
         "date": "2026-11-10",
         "favorites": 0
+    },
+    {
+        "id": 64,
+        "title": "AI Dev Board",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A job board and research aggregator featuring thousands of roles for AI and machine learning engineers, complete with a built-in MCP server and REST API for AI agents.",
+        "image": "assets/images/thumbnails/AI Dev Board.png",
+        "url": "https://aidevboard.com/",
+        "date": "2026-11-10",
+        "favorites": 0
+    },
+    {
+        "id": 65,
+        "title": "AI for Database",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An AI-powered database assistant that allows teams to query live databases and spreadsheets in plain English, generate instant dashboards, and set up automated data workflows.",
+        "image": "assets/images/thumbnails/AI for Database.png",
+        "url": "https://www.aifordatabase.com/",
+        "date": "2026-11-10",
+        "favorites": 0
+    },
+    {
+        "id": 66,
+        "title": "AI Text Humanizer",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An online paraphrasing tool designed to rewrite machine-generated text into natural, human-like language to improve readability and bypass AI detectors.",
+        "image": "assets/images/thumbnails/AI Text Humanizer.png",
+        "url": "https://ai-text-humanizer.com/",
+        "date": "2026-11-10",
+        "favorites": 0
+    },
+    {
+        "id": 67,
+        "title": "AI Website Prompt Generator",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A suite of mobile-first tools and templates designed to help creators clone layouts, restyle pages, rebrand sites, and generate production-ready prompts for AI website builders.",
+        "image": "assets/images/thumbnails/AI Website Prompt Generator.png",
+        "url": "https://aiwebsitepromptgenerator.com/",
+        "date": "2026-11-10",
+        "favorites": 0
+    },
+    {
+        "id": 68,
+        "title": "Firebase",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "Google's comprehensive app development platform providing backend services, real-time databases, authentication, hosting, and cloud storage for mobile and web applications.",
+        "image": "assets/images/thumbnails/Firebase.png",
+        "url": "https://firebase.google.com/",
+        "date": "2026-11-10",
+        "favorites": 0
     }
 ]
