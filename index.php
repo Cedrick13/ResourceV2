@@ -184,7 +184,7 @@ $totalFavorites = array_sum(
             </div>
             
             <!-- LATEST ADDITIONS -->
-            <section class="latest-section">
+            <section class="latest-section" id="latestSection">
             
                 <div class="section-heading">
             

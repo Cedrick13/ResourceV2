@@ -10,6 +10,7 @@ const resourceSearch = document.getElementById('resourceSearch');
 const resourceCount = document.getElementById('resourceCount');
 const emptyState = document.getElementById('emptyState');
 const viewMoreBtn = document.getElementById('viewMoreBtn');
+const latestSection = document.getElementById('latestSection');
 
 const sectionTitle = document.getElementById('resourceSectionTitle');
 const sectionDescription = document.getElementById('resourceSectionDescription');
@@ -18,8 +19,27 @@ const DEFAULT_TITLE = 'Explore the Library';
 const DEFAULT_DESCRIPTION =
     'Discover useful tools and resources for your next project.';
 
-// Update section heading and browser tab
+// ========================================
+// LATEST ADDITIONS VISIBILITY
+// ========================================
+
+function updateLatestVisibility() {
+
+    if (latestSection) {
+        latestSection.style.display =
+            activeCategory === 'all' && !favoritesOnly
+                ? ''
+                : 'none';
+    }
+
+}
+
+// ========================================
+// UPDATE SECTION HEADING
+// ========================================
+
 function updateSectionHeading(title, description) {
+
     if (sectionTitle) {
         sectionTitle.textContent = title;
     }
@@ -31,8 +51,12 @@ function updateSectionHeading(title, description) {
     document.title = `${title} | ResourceV2`;
 }
 
+// ========================================
 // CATEGORY FILTER
+// ========================================
+
 document.querySelectorAll('.category-btn').forEach(button => {
+
     button.addEventListener('click', () => {
 
         document.querySelectorAll('.category-btn')
@@ -43,27 +67,39 @@ document.querySelectorAll('.category-btn').forEach(button => {
         activeCategory = button.dataset.category;
         favoritesOnly = false;
         visibleLimit = RESOURCES_PER_PAGE;
-        
+
+        // Show Latest Additions only on All Resources
+        updateLatestVisibility();
+
         const categoryName =
             button.dataset.name || 'All Resources';
-        
+
         if (activeCategory === 'all') {
+
             updateSectionHeading(
-                'Explore the Library',
+                DEFAULT_TITLE,
                 'Browse our curated collection of design and development resources.'
             );
+
         } else {
+
             updateSectionHeading(
                 categoryName,
                 `Explore our ${categoryName.toLowerCase()} collection.`
             );
+
         }
 
         applyResourceFilters();
+
     });
+
 });
 
+// ========================================
 // FAVORITES FILTER
+// ========================================
+
 document.getElementById('showFavorites')?.addEventListener('click', () => {
 
     favoritesOnly = true;
@@ -76,28 +112,47 @@ document.getElementById('showFavorites')?.addEventListener('click', () => {
     document.querySelector('[data-category="all"]')
         ?.classList.add('active');
 
-        updateSectionHeading(
-            'Your Saved Resources',
-            'All your favorite resources in one place.'
-        );
-        
+    // Hide Latest Additions in Favorites
+    updateLatestVisibility();
+
+    updateSectionHeading(
+        'Your Saved Resources',
+        'All your favorite resources in one place.'
+    );
+
     applyResourceFilters();
+
 });
 
+// ========================================
 // SEARCH
+// ========================================
+
 resourceSearch?.addEventListener('input', () => {
+
     visibleLimit = RESOURCES_PER_PAGE;
     applyResourceFilters();
+
 });
 
+// ========================================
 // VIEW MORE
+// ========================================
+
 viewMoreBtn?.addEventListener('click', () => {
+
     visibleLimit += RESOURCES_PER_PAGE;
     applyResourceFilters();
+
 });
 
+// ========================================
 // APPLY FILTERS
+// ========================================
+
 function applyResourceFilters() {
+
+    if (!resourceGrid) return;
 
     const query = resourceSearch?.value.toLowerCase().trim() || '';
 
@@ -140,21 +195,26 @@ function applyResourceFilters() {
         if (matches) {
             matchingCards.push(item);
         }
+
     });
 
     // Show matching resources according to View More limit
     matchingCards.forEach((item, index) => {
+
         item.classList.toggle(
             'resource-hidden',
             index >= visibleLimit
         );
+
     });
 
     // Hide non-matching resources
     cards.forEach(item => {
+
         if (item.dataset.matches !== 'true') {
             item.classList.add('resource-hidden');
         }
+
     });
 
     const visibleCount = Math.min(
@@ -163,23 +223,36 @@ function applyResourceFilters() {
     );
 
     if (resourceCount) {
+
         resourceCount.textContent =
             `${visibleCount} of ${matchingCards.length} Resources`;
+
     }
 
     if (emptyState) {
+
         emptyState.hidden = matchingCards.length !== 0;
+
     }
 
     // View More visibility
     if (viewMoreBtn) {
+
         viewMoreBtn.style.display =
             matchingCards.length > visibleLimit
                 ? 'inline-flex'
                 : 'none';
+
     }
+
 }
 
+// ========================================
 // INITIALIZE
+// ========================================
+
 updateSectionHeading(DEFAULT_TITLE, DEFAULT_DESCRIPTION);
+
+updateLatestVisibility();
+
 applyResourceFilters();
