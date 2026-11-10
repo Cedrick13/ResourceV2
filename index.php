@@ -2,6 +2,23 @@
 <?php
 
 // ========================================
+// CLEAN PAGE SOURCE
+// ========================================
+
+function clean_page_source($buffer) {
+    $search = array(
+        '/\s+/',
+        '/>\s+</'
+    );
+
+    $replace = array(' ', '><');
+
+    return preg_replace($search, $replace, $buffer);
+}
+
+ob_start("clean_page_source");
+
+// ========================================
 // RESOURCE DATA
 // ========================================
 
