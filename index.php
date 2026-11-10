@@ -32,6 +32,25 @@ if (file_exists($resourcesFile)) {
 }
 
 // ========================================
+// SORT LATEST RESOURCES FIRST
+// ========================================
+
+usort($resources, function ($a, $b) {
+
+    $dateComparison = strcmp(
+        $b['date'] ?? '',
+        $a['date'] ?? ''
+    );
+
+    if ($dateComparison !== 0) {
+        return $dateComparison;
+    }
+
+    // Newest ID first when dates are identical
+    return ($b['id'] ?? 0) <=> ($a['id'] ?? 0);
+});
+
+// ========================================
 // CATEGORY DATA
 // ========================================
 
