@@ -2,6 +2,28 @@
 <?php
 
 // ========================================
+// CLEAN PAGE SOURCE
+// ========================================
+
+function clean_page_source($buffer) {
+
+    // Remove regular HTML comments
+    $buffer = preg_replace(
+        '/<!--(?!\[if).*?-->/s',
+        '',
+        $buffer
+    );
+
+    // Remove unnecessary whitespace between HTML tags
+    $buffer = preg_replace('/>\s+</', '><', $buffer);
+
+    return trim($buffer);
+}
+
+// Start output buffering
+ob_start('clean_page_source');
+
+// ========================================
 // RESOURCE DATA
 // ========================================
 
