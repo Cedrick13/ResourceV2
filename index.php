@@ -32,10 +32,13 @@ if (file_exists($resourcesFile)) {
 }
 
 // ========================================
-// SORT LATEST RESOURCES FIRST
+// LATEST ADDITIONS
 // ========================================
 
-usort($resources, function ($a, $b) {
+$latestResources = $resources;
+
+// Sort by newest date, then highest ID
+usort($latestResources, function ($a, $b) {
 
     $dateComparison = strcmp(
         $b['date'] ?? '',
@@ -46,9 +49,11 @@ usort($resources, function ($a, $b) {
         return $dateComparison;
     }
 
-    // Newest ID first when dates are identical
     return ($b['id'] ?? 0) <=> ($a['id'] ?? 0);
 });
+
+// Show only 3 latest resources
+$latestResources = array_slice($latestResources, 0, 3);
 
 // ========================================
 // CATEGORY DATA
@@ -159,6 +164,43 @@ $totalFavorites = array_sum(
 
             <!-- SEARCH AND SORT -->
             <div class="toolbar">
+                
+                <!-- ========================================
+                    LATEST ADDITIONS
+                ======================================== -->
+                
+                <section class="latest-section">
+                
+                    <div class="section-heading">
+                
+                        <div>
+                            <h2>Latest Additions</h2>
+                
+                            <p>
+                                Discover the newest resources added to the library.
+                            </p>
+                        </div>
+                
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            Recently Added
+                        </span>
+                
+                    </div>
+                
+                    <div class="resource-grid latest-grid">
+                
+                        <?php foreach ($latestResources as $resource): ?>
+                
+                            <div class="resource-item">
+                                <?php include __DIR__ . '/components/resource-card.php'; ?>
+                            </div>
+                
+                        <?php endforeach; ?>
+                
+                    </div>
+                
+                </section>
 
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>

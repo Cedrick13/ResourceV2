@@ -425,6 +425,48 @@ button, input, select {
     font-size: 12px;
 }
 
+/* ========================================
+   LATEST ADDITIONS
+======================================== */
+
+.latest-section {
+    margin-bottom: 45px;
+}
+
+.latest-section .section-heading {
+    margin-bottom: 20px;
+}
+
+.latest-section .section-heading > span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(101, 183, 232, 0.10);
+    padding: 8px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.latest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .latest-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .latest-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* ========================================
    RESOURCE STATISTICS
