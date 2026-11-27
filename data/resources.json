@@ -199,12 +199,12 @@
     },
     {
         "id": 19,
-        "title": "Freepik",
-        "category": "templates",
-        "category_name": "Templates",
-        "description": "A massive repository of free and premium graphic resources, including vector files, stock photos, PSD templates, and design mockups.",
-        "image": "assets/images/thumbnails/freepik.png",
-        "url": "https://www.freepik.com/",
+        "title": "Magnific AI",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An advanced AI-powered image upscaling and enhancement platform that allows users to enlarge images up to 16x while using prompt guidance, creativity dials, and specialized modes to reinvent or preserve fine textures and details.",
+        "image": "assets/images/thumbnails/Magnific AI.png",
+        "url": "https://www.magnific.com/",
         "date": "2026-10-30",
         "favorites": 0
     },
@@ -920,6 +920,17 @@
         "description": "A digital marketplace and resource library offering thousands of responsive website templates, WordPress themes, UI kits, and starter code layouts categorized by industry and use case.",
         "image": "assets/images/thumbnails/W3Layouts.png",
         "url": "https://w3layouts.com/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 85,
+        "title": "Wix",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A cloud-based web development platform and visual site builder offering drag-and-drop design tools, customizable templates, hosting, and integrated content management features.",
+        "image": "assets/images/thumbnails/Wix.png",
+        "url": "https://www.wix.com/",
         "date": "2026-11-27",
         "favorites": 0
     }
