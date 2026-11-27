@@ -823,5 +823,38 @@
         "url": "https://aniwaves.tv/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 76,
+        "title": "Cheatography",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A community-driven repository of over 7,000 free printable cheat sheets, syntax references, keyboard shortcuts, and quick-reference guides covering programming languages, DevOps, software, and more.",
+        "image": "assets/images/thumbnails/Cheatography.png",
+        "url": "https://www.cheatography.com/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 77,
+        "title": "Certificates.dev",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A practitioner-led technical certification platform offering official, proctored coding exams and credentials for modern web developers across frameworks like Vue.js, Nuxt, Angular, React, JavaScript, TypeScript, and AI-native development.",
+        "image": "assets/images/thumbnails/Certificates.dev.png",
+        "url": "https://certificates.dev/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 78,
+        "title": "Sketch",
+        "category": "design-systems",
+        "category_name": "Design Systems",
+        "description": "A native macOS digital design toolkit and vector editor built for UI/UX prototyping, design systems, shared libraries, and developer handoff.",
+        "image": "assets/images/thumbnails/Sketch.png",
+        "url": "https://www.sketch.com/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
