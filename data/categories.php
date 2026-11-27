@@ -31,5 +31,10 @@ return [
         'name' => 'Code Snippets',
         'slug' => 'code-snippets',
         'icon' => 'fa-solid fa-code'
+    ],
+    [
+        'name' => 'Movies',
+        'slug' => 'movies',
+        'icon' => 'fa-solid fa-film'
     ]
 ];
