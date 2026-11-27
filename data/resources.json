@@ -889,5 +889,38 @@
         "url": "https://www.lottielab.com/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 82,
+        "title": "Resume.com",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "An online resume builder and professional career platform that provides customizable templates, step-by-step writing tools, and sharing utilities to help job seekers build and download resumes.",
+        "image": "assets/images/thumbnails/Resume.com.png",
+        "url": "https://www.resume.com/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 83,
+        "title": "CleanSnap",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "A web-based utility designed to transform raw screenshots into clean, polished images with customizable backgrounds, padding, rounded corners, drop shadows, and glassmorphism effects.",
+        "image": "assets/images/thumbnails/CleanSnap.png",
+        "url": "https://www.cleansnap.co/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 84,
+        "title": "W3Layouts",
+        "category": "templates",
+        "category_name": "Templates",
+        "description": "A digital marketplace and resource library offering thousands of responsive website templates, WordPress themes, UI kits, and starter code layouts categorized by industry and use case.",
+        "image": "assets/images/thumbnails/W3Layouts.png",
+        "url": "https://w3layouts.com/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
