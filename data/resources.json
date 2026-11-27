@@ -768,5 +768,16 @@
         "url": "https://pinoymoviepedia.ru/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 71,
+        "title": "Movies4us",
+        "category": "movies",
+        "category_name": "Movies",
+        "description": "A dedicated web-based movie and television directory providing users with organized streaming links, genre filters, and a searchable index for on-demand entertainment.",
+        "image": "assets/images/thumbnails/Movies4us.png",
+        "url": "https://movies4us.net/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
