@@ -856,5 +856,38 @@
         "url": "https://www.sketch.com/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 79,
+        "title": "Figma",
+        "category": "design-systems",
+        "category_name": "Design Systems",
+        "description": "A collaborative web-based interface design, vector graphics editing, and prototyping tool built for UI/UX teams, design systems, and developer handoff.",
+        "image": "assets/images/thumbnails/figma comm.png",
+        "url": "https://www.figma.com/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 80,
+        "title": "Moqups",
+        "category": "design-systems",
+        "category_name": "Design Systems",
+        "description": "A streamlined, web-based visual collaboration tool that combines wireframing, UI prototyping, mockups, and real-time diagramming into a single workspace.",
+        "image": "assets/images/thumbnails/Moqups.png",
+        "url": "https://moqups.com/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 81,
+        "title": "Lottielab",
+        "category": "ui-kits",
+        "category_name": "UI Kits",
+        "description": "A web-based motion design and animation tool that allows product and design teams to create, edit, optimize, and ship lightweight Lottie animations for web and mobile apps.",
+        "image": "assets/images/thumbnails/Lottielab.png",
+        "url": "https://www.lottielab.com/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
