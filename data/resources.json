@@ -933,5 +933,27 @@
         "url": "https://www.wix.com/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 86,
+        "title": "AIGrammarChecker",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An AI-powered grammar and spell-checking utility that instantly detects writing errors, punctuation misuse, and structural issues while offering contextual improvements and multilingual explanations.",
+        "image": "assets/images/thumbnails/AIGrammarChecker.png",
+        "url": "https://aigrammarchecker.io/",
+        "date": "2026-11-27",
+        "favorites": 0
+    },
+    {
+        "id": 87,
+        "title": "Humanize AI Text",
+        "category": "tools",
+        "category_name": "Tools",
+        "description": "An AI content humanizer and text-rewriting platform designed to transform machine-generated drafts from tools like ChatGPT or Claude into natural, readable, human-sounding writing.",
+        "image": "assets/images/thumbnails/Humanize AI Text.png",
+        "url": "https://humanizeaitext.ai/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
