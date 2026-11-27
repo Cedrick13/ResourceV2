@@ -779,5 +779,16 @@
         "url": "https://movies4us.net/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 72,
+        "title": "Gogoanime",
+        "category": "movies",
+        "category_name": "Movies",
+        "description": "A dedicated online streaming directory and digital archive specializing in Japanese animation (anime), offering an extensive catalog of subbed and dubbed series, movies, and simulcasts.",
+        "image": "assets/images/thumbnails/Gogoanime.png",
+        "url": "https://www.gogoanime.is/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
