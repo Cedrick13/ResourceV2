@@ -171,7 +171,7 @@ $totalFavorites = array_sum(
                     <input
                         type="search"
                         id="resourceSearch"
-                        placeholder="Search code resources..."
+                        placeholder="Search resources..."
                     >
                 </div>
 
