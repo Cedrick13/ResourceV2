@@ -47,6 +47,7 @@
             <span>🖼 Templates</span>
             <span>🔧 Tools</span>
             <span>📦 Assets</span>
+            <span>🎞️ Movies</span>
         </div>
     </div>
 
