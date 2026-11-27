@@ -757,5 +757,16 @@
         "url": "https://ww.fmoviess.org/",
         "date": "2026-11-27",
         "favorites": 0
+    },
+    {
+        "id": 70,
+        "title": "Pinoymoviepedia",
+        "category": "movies",
+        "category_name": "Movies",
+        "description": "An online streaming directory and video index focused on Filipino cinema, offering a wide catalog of Tagalog movies, local series, microdramas, and digital releases.",
+        "image": "assets/images/thumbnails/Pinoymoviepedia.png",
+        "url": "https://pinoymoviepedia.ru/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
