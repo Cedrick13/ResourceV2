@@ -746,5 +746,16 @@
         "url": "https://firebase.google.com/",
         "date": "2026-11-10",
         "favorites": 0
+    },
+    {
+        "id": 69,
+        "title": "Fmovies",
+        "category": "movies",
+        "category_name": "Movies",
+        "description": "A popular online video streaming index and file-sharing directory that allows users to watch and stream a massive library of movies and TV series online for free.",
+        "image": "assets/images/thumbnails/Fmovies.png",
+        "url": "https://ww.fmoviess.org/",
+        "date": "2026-11-27",
+        "favorites": 0
     }
 ]
